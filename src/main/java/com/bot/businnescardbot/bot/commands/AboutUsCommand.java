@@ -36,7 +36,7 @@ public class AboutUsCommand implements IBotCommand {
         try {
             absSender.execute(answer);
         } catch (TelegramApiException e) {
-//            log.error("Error occurred in /about_us command", e);
+            log.error("Error occurred in /about_us command", e);
         }
     }
 }

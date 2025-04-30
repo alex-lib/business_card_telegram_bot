@@ -1,12 +1,10 @@
 package com.bot.businnescardbot.entities;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 @Setter
 @Getter
 @Entity
@@ -19,6 +17,6 @@ public class Subscriber {
     private String userName;
     @Column(name = "first_name", columnDefinition = "VARCHAR(50)", nullable = true)
     private String firstName;
-    @Column(name = "first_name", columnDefinition = "VARCHAR(50)", nullable = true)
+    @Column(name = "last_name", columnDefinition = "VARCHAR(50)", nullable = true)
     private String lastName;
 }

@@ -9,13 +9,13 @@ import org.telegram.telegrambots.meta.api.objects.User;
 @RequiredArgsConstructor
 @Service
 @Slf4j
-public class SubscriberService {
+public class SubscriberServiceImpl {
     private final SubscriberRepository subscriberRepository;
 
     public void updateOrSaveSubscriber(User user) {
         Subscriber persistantSubscriber = subscriberRepository.findSubscriberBySubscriberId(user.getId());
         if (persistantSubscriber != null) {
-            persistantSubscriber.setUserName(user.getUserName());
+            persistantSubscriber = Subscriber.builder().userName(user.getUserName()).build();
             log.info("User is found and updated - {}", user.getId());
         }
 

@@ -1,5 +1,4 @@
 package com.bot.businnescardbot.repositories;
-
 import com.bot.businnescardbot.entities.Subscriber;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
